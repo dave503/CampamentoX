@@ -36,7 +36,7 @@ require_once('./header.php');
 									
 									<th class="text-center">TIPO</th>
 									<th class="text-center">VALOR</th>
-                  <th class="text-center">DESCUENTO</th>
+                 <th class="text-center">DESCUENTO</th>
 								</tr>
 							</thead>
 							<tbody>

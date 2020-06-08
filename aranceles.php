@@ -14,14 +14,14 @@ require_once('./header.php');
     // Menu
  require_once('./menu.php');
 
-if (!isset($_GET['id'])) {
-    $tipo = "";
+ if(!isset($_GET['id'])){
+	$tipo = "";
     $valor = "";
     $descuento = "";
 	$titulo = "NUEVO";
 	$path = "funciones/add-aranceles.php";
-}else {
-    $id = $_GET['id'];
+}else{
+	$id = $_GET['id'];
 	$query = "SELECT * FROM aranceles WHERE id_aran = '$id'";
 	$result = mysqli_query($connection,$query);
 	$row = mysqli_fetch_array($result);
@@ -31,7 +31,6 @@ if (!isset($_GET['id'])) {
 	$titulo = "MODIFICAR";
 	$path = "funciones/mod-aranceles.php";
 }
-
   
 ?>
    <div class="main-content">
@@ -56,10 +55,11 @@ if (!isset($_GET['id'])) {
                 
                     </ul>
        
-                
+            
                     <div class="tab-content tab-bordered" id="myTab3Content">
                       <div class="tab-pane fade show active" id="settings" role="tabpanel" aria-labelledby="profile-tab2">
                         <form action="<?php echo $path; ?>" method="POST"class="needs-validation">
+                        <input type="hidden" name="id" value="<?php echo $id; ?>">
                           <div class="card-body">
                             <div class="row">
                               <div class="form-group col-md-6 col-12">
@@ -83,12 +83,12 @@ if (!isset($_GET['id'])) {
                                 <select name="descuento" class="form-control" required>
                                             <option value="">Seleccione una opcion</option>
                                               <option value="<?php echo $descuento; ?>"></option>
-									          	<option value="0.10">10%</option>
-									          	<option value="0.20">20%</option>
-												<option value="0.30">30%</option>
-												<option value="0.40">40%</option>
-												<option value="O">otro</option>
-									        </select>
+									                      	<option value="0.10">10%</option>
+                                        <option value="0.20">20%</option>
+                                          <option value="0.30">30%</option>
+                                          <option value="0.40">40%</option>
+                                          <option value="O">otro</option>
+                                    </select>
                             
                               </div>
                        
