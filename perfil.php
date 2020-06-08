@@ -7,8 +7,7 @@
       <div class="navbar-bg"></div>
        <!-- Cabecera-->
        <?php require_once('./cabecera.php'); ?>
-      <!-- Menu-->
-      <?php require_once('./menu.php'); ?>
+       
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
@@ -20,7 +19,7 @@
                 <div class="card author-box">
                   <div class="card-body">
                     <div class="author-box-center">
-                      <img alt="image" src="assets\img\users\user-1.png" class="rounded-circle author-box-picture">
+                      <img alt="image" src="./files/<?php echo $row['foto']; ?>" class="rounded-circle author-box-picture">
                       <div class="clearfix"></div>
                       <div class="author-box-name">
                         <a href="#"><?php echo $row['nombre']." ".$row['apellido']; ?></a>
@@ -99,7 +98,8 @@
                     </ul>
                     <div class="tab-content tab-bordered" id="myTab3Content">
                       <div class="tab-pane fade show active" id="settings" role="tabpanel" aria-labelledby="profile-tab2">
-                        <form method="post" class="needs-validation">
+                        <form action="./funciones/add-foto.php" method="post" class="needs-validation" enctype="multipart/form-data" name="foo">
+                          <input type="hidden" name="id" value="<?php echo $row['id_part'];?>">
                           <div class="card-body">
                             <div class="row">
                               <div class="form-group col-md-6 col-12">
@@ -119,36 +119,31 @@
                             </div>
                             <div class="row">
                               <div class="form-group col-md-6 col-12">
-                                <label>Correo electronico</label>
-                                <input name="email" type="email" class="form-control" value="<?php echo $row['email']; ?>">
-                                <div class="invalid-feedback">
-                                  Inserte su correo electronico
-                                </div>
-                              </div>
-                              <div class="form-group col-md-6 col-12">
-                                <label>Telefono</label>
-                                <input name="telefono" type="tel" class="form-control" value="<?php echo $row['telefono']; ?>">
-                              </div>
-                              <div class="form-group col-md-12 col-12">
-                                <label>Direccion</label>
-                                <textarea class="form-control" name="direccion" id="direccion" cols="30" rows="10"> <?php echo $row['direccion']; ?></textarea>
-                              </div>
-                              <div class="form-group col-md-6 col-12">
                                 <label>Contraseña</label>
                                 <input name="contra" type="password" class="form-control" value="<?php echo $row['contra']; ?>">
                               </div>
+                              
                               <div class="form-group col-md-6 col-12">
-                                <label>Cconfirmar contraseña</label>
+                                <label>Confirmar contraseña</label>
                                 <input name="contra_conf" type="password" class="form-control" value="<?php echo $row['contra']; ?>">
                               </div>
                             </div>
                             </div>
-                            
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Cambiar foto</label>
+                                <div class="col-sm-12 col-md-7">
+                                  <div id="image-preview" class="image-preview">
+                                    <label for="image-upload" id="image-label">Buscar foto</label>
+                                    <input type="file" name="image" id="image-upload" value="./files/<?php echo $row['foto']; ?>">
+                                  </div>
+                                </div>
+                              </div>
                           </div>
                           <div class="card-footer text-right">
-                            <button class="btn btn-primary">Save Changes</button>
+                            <input type="submit" value="Guardar cambios" class="btn btn-primary">
                           </div>
                         </form>
+                        
                       </div>
                     </div>
                   </div>
