@@ -23,8 +23,8 @@
     $query = "INSERT INTO participantes (nombre, apellido, sexo, direccion, email, telefono, edad, dui, encargado, pago, departamento, usuario, contra, tipo, fecha_registro) 
     VALUES ('$nombre', '$apellido', '$sexo', '$direccion', '$email', '$telefono', '$edad', '$dui', '$encargado', '$pago', '$departamento', '$usuario', 12345, '$tipo', NOW());";
 
-    $result = mysqli_query($connection,$query) or die (mysqli_error($connection));
 
+    $result = mysqli_query($connection,$query) or die (mysqli_error($connection));
 
     if($result == 1){
         
@@ -40,5 +40,6 @@
     }else{
         echo "Fallo al guardar";
     }
+
 
 ?>

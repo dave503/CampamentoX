@@ -33,6 +33,10 @@ require_once('./header.php');
 }
   
 ?>
+
+
+
+
    <div class="main-content">
         <section class="section">
           <div class="section-body">
@@ -81,23 +85,18 @@ require_once('./header.php');
                               <div class="form-group col-md-6 col-12">
                                 <label>Descuento*</label>
                                 <select name="descuento" class="form-control" required>
-                                            <option value="">Seleccione una opcion</option>
-                                              <option value="<?php echo $descuento; ?>"></option>
-									                      	<option value="0.10">10%</option>
-                                        <option value="0.20">20%</option>
-                                          <option value="0.30">30%</option>
-                                          <option value="0.40">40%</option>
-                                          <option value="O">otro</option>
-                                    </select>
-                            
-                              </div>
-                       
-                            
-                    
+                                  <option value="<?php echo $descuento; ?>"></option>
+									          	<option value="0.10">10%</option>
+									          	<option value="0.20">20%</option>
+                              <option value="0.30">30%</option>
+                              <option value="0.40">40%</option>
+                              <option value="O">otro</option>
+                                </select>
+                        
                             
                             </div>
                             </div>
-                            
+                            </div>
                           </div>
                           <div class="card-footer text-right">
                             <button class="btn btn-primary">Guardar Cambios</button>

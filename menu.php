@@ -12,13 +12,13 @@
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="user"></i><span>Personas</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="">Administradores</a></li>
-                <li><a class="nav-link" href="">Participantes</a></li>
-                <li><a class="nav-link" href="">Lideres</a></li>
+                <li><a class="nav-link" href="admin.php">Administradores</a></li>
+                <li><a class="nav-link" href="participantes-list.php">Participantes</a></li>
+                <li><a class="nav-link" href="lideres.php">Lideres</a></li>
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="briefcase"></i><span>Administracion</span></a>
+              <a href="admin.php" class="menu-toggle nav-link has-dropdown"><i data-feather="briefcase"></i><span>Administracion</span></a>
               <ul class="dropdown-menu">
                 <li><a class="nav-link" href="campamento.php">Campamentos</a></li>
                 <li><a class="nav-link" href="aranceles.php">Aranceles</a></li>
