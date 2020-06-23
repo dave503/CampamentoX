@@ -15,19 +15,27 @@ require_once('./header.php');
  require_once('./menu.php');
   
     ?>
-	  <div class="main-content">
+	   <div class="main-content">
         <section class="section">
-        <div class="col-12 col-md-12 col-lg-8">
+          <div class="section-body">
+            <!-- Inicio de contenido -->
+
+            <div class="container-fluid">
+			
+		</div>
+           
+              <div >
                 <div class="card">
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
                       <li class="nav-item">
-                      <a class="nav-link active" href="participante.php" role="tab" aria-selected="false">Nuevo Participantes	</a>
+                        <a class="nav-link active" href="participante.php" role="tab" aria-selected="false">Nuevo Campamento	</a>
                       </li>
-
+                        
+                  
+			  	</li>
+                
                     </ul>
-                    <div class="container-fluid">
-			<div class="panel panel-info">
 			
         <table class="table table-hover text-center" id="datos" width="100%">
 							<thead>

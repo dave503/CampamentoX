@@ -43,7 +43,7 @@ require_once('./header.php');
 			
 		</div>
            
-              <div class="col-12 col-md-12 col-lg-8">
+              <div >
                 <div class="card">
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
@@ -80,7 +80,9 @@ require_once('./header.php');
                             </div>
                    
                             
-                   
+                            </div>
+                                            
+                            </div>
                           <div class="card-footer text-right">
                             <button class="btn btn-primary">Guardar Cambios</button>
                           </div>

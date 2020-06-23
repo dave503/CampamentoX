@@ -18,7 +18,7 @@ require_once('./header.php');
 
 	  <div class="main-content">
         <section class="section">
-        <div class="col-12 col-md-12 col-lg-8">
+        <div class="">
                 <div class="card">
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">

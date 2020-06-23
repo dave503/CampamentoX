@@ -73,7 +73,7 @@ if(!isset($_GET['id'])){
 			
 		</div>
            
-              <div class="col-12 col-md-12 col-lg-8">
+              <div>
                 <div class="card">
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
@@ -199,18 +199,11 @@ if(!isset($_GET['id'])){
                                   Inserte la direccion de el participantes
                                 </div>
                               </div>
-
-                             
-
-                              
-
-                         
-
-                             
-
-
                             
-                   
+                            </div>
+                            </div>
+                            </div>
+                            </div>  
                           <div class="card-footer text-right">
                             <button class="btn btn-primary">Guardar Cambios</button>
                           </div>

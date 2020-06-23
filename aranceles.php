@@ -36,17 +36,24 @@ require_once('./header.php');
 
 
 
-
-   <div class="main-content">
+<body>
+  <div class="loader"></div>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+       <!-- Cabecera-->
+     
+       
+      <!-- Main Content -->
+      <div class="main-content">
         <section class="section">
           <div class="section-body">
-            <!-- Inicio de contenido -->
-
             <div class="container-fluid">
+
+            <div>
 			
-		</div>
-           
-              <div class="col-12 col-md-12 col-lg-8">
+
+              <div>
                 <div class="card">
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
@@ -81,20 +88,14 @@ require_once('./header.php');
                                 </div>
                               </div>
                             </div>
-                            <div class="row">
-                              <div class="form-group col-md-6 col-12">
-                                <label>Descuento*</label>
-                                <select name="descuento" class="form-control" required>
-                                  <option value="<?php echo $descuento; ?>"></option>
-									          	<option value="0.10">10%</option>
-									          	<option value="0.20">20%</option>
-                              <option value="0.30">30%</option>
-                              <option value="0.40">40%</option>
-                              <option value="O">otro</option>
-                                </select>
-                        
-                            
-                            </div>
+                                <div class="form-group">
+                      <label>Select</label>
+                      <select class="form-control">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                      </select>
+                    </div>
                             </div>
                             </div>
                           </div>
@@ -111,6 +112,7 @@ require_once('./header.php');
 
             <!-- Fin del contenido -->
           </div>
+          div
         </section>
       </div>
 //arhivos js
