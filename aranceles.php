@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+</html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -88,14 +91,17 @@ require_once('./header.php');
                                 </div>
                               </div>
                             </div>
-                                <div class="form-group">
-                      <label>Select</label>
-                      <select class="form-control">
-                        <option>Option 1</option>
-                        <option>Option 2</option>
-                        <option>Option 3</option>
-                      </select>
-                    </div>
+                            <div class="form-group">
+                                    <label>Select</label>
+                                    <select name="descuento" class="form-control">
+                                    <option value="<?php echo $descuento; ?>"></option>
+                                    <option value="0.10">10%</option>
+                                    <option value="0.20">20%</option>
+                                    <option value="0.30">30%</option>
+                                    <option value="0.40">40%</option>
+                                    <option value="O">otro</option>
+                                    </select>
+                                    </div>
                             </div>
                             </div>
                           </div>
@@ -115,7 +121,12 @@ require_once('./header.php');
           div
         </section>
       </div>
-//arhivos js
+
+
+</body>
+</html>
+       <!-- footers -->
 <?php require_once('./footer.php'); ?>
 </body>
+
 </html>

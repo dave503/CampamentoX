@@ -69,16 +69,16 @@ require_once('./header.php');
                                     <td><?php echo $data['apellido']; ?></td>
                                     <td><?php echo $data['sexo']; ?></td>
                                     <td><?php echo $data['direccion']; ?></td>
-									<td><?php echo $data['nombre']; ?></td>
+								                   	<td><?php echo $data['nombre']; ?></td>
                                     <td><?php echo $data['edad']; ?></td>
                                     <td><?php echo $data['tipo']; ?></td>
                                     <td><?php echo $data['telefono']; ?></td>
 									
                                     <td>
-									<a href="aranceles.php?&id=<?php echo $id; ?>" class="btn btn-success btn-raised btn-xs" title="Editar">
+                                    <a href="participante.php?tip=2&id=<?php echo $id_part; ?>" class="btn btn-success btn-raised btn-xs" title="Editar">
 											<i class="zmdi zmdi-edit"></i>
                                         </a>
-										<a href="funciones/del-aranceles.php?id=<?php echo $id; ?>" class="btn btn-danger btn-raised btn-xs" title="Borrar">
+                                        <a href="funciones/del-participante.php?id=<?php echo $id_part; ?>" class="btn btn-danger btn-raised btn-xs" title="Borrar">
 											<i class="zmdi zmdi-delete"></i>
 										</a>
                                     </td>

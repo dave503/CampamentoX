@@ -16,18 +16,20 @@ require_once('./header.php');
   
 ?>
 
-	  <div class="main-content">
+<div class="main-content">
         <section class="section">
-        <div class="">
+        <div    >
                 <div class="card">
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
                       <li class="nav-item">
-                      <a class="nav-link active" href="aranceles.php" role="tab" aria-selected="false">Nuevo Aranceles	</a>
+                      <a class="nav-link active" href="aranceles.php" role="tab" aria-selected="false">Nuevo Arancel	</a>
                       </li>
 
                     </ul>
                     <div class="container-fluid">
+                    </div>
+                    
 			<div class="panel panel-info">
 			
         <table class="table table-hover text-center" id="datos" width="100%">
@@ -37,6 +39,7 @@ require_once('./header.php');
 									<th class="text-center">TIPO</th>
 									<th class="text-center">VALOR</th>
                  <th class="text-center">DESCUENTO</th>
+                 <th class="text-center">ACCION</th>
 								</tr>
 							</thead>
 							<tbody>
