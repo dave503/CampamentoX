@@ -81,7 +81,6 @@ require_once('./header.php');
                                     <td><?php echo $data['apellido']; ?></td>
                                     <td><?php echo $data['sexo']; ?></td>
                                     <td><?php echo $data['direccion']; ?></td>
-								                   	<td><?php echo $data['nombre']; ?></td>
                                     <td><?php echo $data['edad']; ?></td>
                                     <td><?php echo $data['tipo']; ?></td>
                                     <td><?php echo $data['telefono']; ?></td>

@@ -1,12 +1,12 @@
 <?php
 	if($_GET['tip']==0){
-		$tip= "PARTICIPANTE";
+		$tip= "Participante";
 		$ruta = "participantes-list.php";
 	}elseif($_GET['tip']==1){
-		$tip = "ADMINISTRADOR";
+		$tip = "Administrador";
 		$ruta = "admin.php";
 	}else{
-		$tip = "LIDER";
+		$tip = "Lider";
 		$ruta = "lideres.php";
 	}
 ?>
@@ -175,7 +175,7 @@ $titulo = "NUEVO";
                                                   while ($data = mysqli_fetch_assoc($res)) {
 
                                                 ?>
-                                                <option value="">Seleccione</option>
+                                               option>
                                          <option value="<?php echo $data['id_aran']; ?>"><?php echo $data['tipo']." $".$data['valor']; ?></option>
 											  
 										                        	<?php } ?> 
@@ -185,7 +185,7 @@ $titulo = "NUEVO";
 
                             <div class="col-xs-12 col-sm-6">
 									              	<div class="form-group label-floating">
-										              	<label class="control-label">Encargado</label>
+										              	<label class="control-label">Mienbro</label>
                                     
                                         <select name="tipo" class="form-control" required>
                                         
