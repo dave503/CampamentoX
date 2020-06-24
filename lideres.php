@@ -47,15 +47,16 @@ require_once('./header.php');
 							<thead>
 								<tr>
 									
-									<th class="text-center">Nombre</th>
-									<th class="text-center">Apellido</th>
-                                    <th class="text-center">Sexo</th>
-                                    <th class="text-center">Direccion</th>
-                                    <th class="text-center">Departamento</th>
-                                    <th class="text-center">Edad</th>
-                                    <th class="text-center">Pago</th>
-                                    <th class="text-center">Telefono</th>
-                                    <th class="text-center">Accion</th>
+
+                                    <th class="text-center">NOMBRE</th>
+                                    <th class="text-center">APELLIDO</th>
+                                    <th class="text-center">SEXO</th>
+                                    <th class="text-center">DIRECCION</th>
+                                    <th class="text-center">DEPARTAMENTO</th>
+                                    <th class="text-center">EDAD</th>
+                                    <th class="text-center">PAGO</th>
+                                    <th class="text-center">TELEFONO</th>
+                                    <th class="text-center">ACCION</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -82,12 +83,8 @@ require_once('./header.php');
                                     <td><?php echo $data['telefono']; ?></td>
 									
                                     <td>
-                                    <a href="participante.php?tip=2&id=<?php echo $id_part; ?>" class="btn btn-success btn-raised btn-xs" title="Editar">
-											<i class="zmdi zmdi-edit"></i>
-                                        </a>
-                                        <a href="funciones/del-participante.php?id=<?php echo $id_part; ?>" class="btn btn-danger btn-raised btn-xs" title="Borrar">
-											<i class="zmdi zmdi-delete"></i>
-										</a>
+                                    <a href="participante.php?tip=2&id=<?php echo $id_part; ?>" title="Editar" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
+                                        <a href="funciones/del-participante.php?id=<?php echo $id_part; ?>" title="Eliminar" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a>
                                     </td>
                                         
                                 </tr>

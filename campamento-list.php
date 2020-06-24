@@ -40,24 +40,24 @@ require_once('./header.php');
                     <div class="container-fluid">
 			<div class="panel panel-info">
      
-			
-        <table class="table table-hover text-center" id="datos" width="100%">
-							<thead>
-								<tr>
+                  
+                    <table class="table table-hover text-center" id="datos" width="100%">
+                          <thead>
+							                    	<tr>
 									
-                                <th class="text-center">LUGAR</th>
-									<th class="text-center">FECHA</th>
+                                    <th class="text-center">LUGAR</th>
+							                  		<th class="text-center">FECHA</th>
                                     <th class="text-center">FECHA DE REGISTRO</th>
                                     <th class="text-center">FECHA DE MODIFICACION</th>
-                                    
-								</tr>
-							</thead>
-							<tbody>
-							<div class="container-fluid">
-			
-		</div>
-                             
-        <?php 
+                                    <th class="text-center">ACCION</th>     
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                        <div class="container-fluid">
+                                                    
+                              </div>
+                                                      
+                                  <?php 
                                         $campa = "SELECT * FROM campamento WHERE estado = 1";
                                         $result = mysqli_query($connection,$campa);
                                           
@@ -75,14 +75,11 @@ require_once('./header.php');
                                     <td><?php echo $data['lugar']; ?></td>
                                     <td><?php echo $data['fecha_camp']; ?></td>
                                     <td><?php echo $data['fecha_registro']; ?></td>
-									<td><?php echo $fecha_mod; ?></td>
+							                  		<td><?php echo $fecha_mod; ?></td>
                                     <td>
-                                        <a href="campamento.php?&id=<?php echo $id_camp; ?>" class="btn btn-success btn-raised btn-xs" title="Editar">
-											<i class="zmdi zmdi-edit"></i>
+                                        <a href="campamento.php?&id=<?php echo $id_camp; ?>" title="Editar" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
                                         </a>
-                                        <a href="funciones/del-campamento.php?id=<?php echo $id_camp; ?>" class="btn btn-danger btn-raised btn-xs" title="Borrar">
-											<i class="zmdi zmdi-delete"></i>
-										</a>
+                                        <a href="funciones/del-campamento.php?id=<?php echo $id_camp; ?>" title="Eliminar" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a></a>
                                     </td>
                                         
                                 </tr>

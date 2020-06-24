@@ -83,12 +83,9 @@ require_once('./header.php');
                                     <td><?php echo $data['telefono']; ?></td>
 									
                                     <td>
-                                    <a href="participante.php?tip=1&id=<?php echo $id_part; ?>" class="btn btn-success btn-raised btn-xs" title="Editar">
-										                  	<i class="zmdi zmdi-edit"></i>
+                                    <a href="participante.php?tip=1&id=<?php echo $id_part; ?>" title="Editar" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
                                         </a>
-                                        <a href="funciones/del-participante.php?id=<?php echo $id_part; ?>" class="btn btn-danger btn-raised btn-xs" title="Borrar">
-                                              <i class="zmdi zmdi-delete"></i>
-                                            </a>
+                                        <a href="funciones/del-participante.php?id=<?php echo $id_part; ?>"  title="Eliminar" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a></a>
                                     </td>
                                         
                                 </tr>

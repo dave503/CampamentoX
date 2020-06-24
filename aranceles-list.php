@@ -15,36 +15,36 @@ require_once('./header.php');
  require_once('./menu.php');
   
 ?>
-
 <div class="main-content">
         <section class="section">
-        <div    >
+          <div class="section-body">
+            <div class="row">
+              <div class="col-12">
                 <div class="card">
-                  <div class="padding-20">
-                    <ul class="nav nav-tabs" id="myTab2" role="tablist">
+                  <div class="card-header">
+                  <ul class="nav nav-tabs" id="myTab2" role="tablist">
                       <li class="nav-item">
                       <a class="nav-link active" href="aranceles.php" role="tab" aria-selected="false">Nuevo Arancel	</a>
                       </li>
 
                     </ul>
-                    <div class="container-fluid">
-                    </div>
-                    
-			<div class="panel panel-info">
+                  </div>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-striped table-hover" id="tableExport" style="width:100%;">
 			
-        <table class="table table-hover text-center" id="datos" width="100%">
-							<thead>
-								<tr>
-									
-									<th class="text-center">TIPO</th>
-									<th class="text-center">VALOR</th>
-                 <th class="text-center">DESCUENTO</th>
-                 <th class="text-center">ACCION</th>
-								</tr>
-							</thead>
-							<tbody>
-							<div class="container-fluid">
-			
+                          <thead>
+                            <tr>
+                                    
+                                    <th class="text-center">TIPO</th>
+                                    <th class="text-center">VALOR</th>
+                                  <th class="text-center">DESCUENTO</th>
+                                  <th class="text-center">ACCION</th>
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <div class="container-fluid">
+        
 		</div>
                                     <?php 
                                         $part = "SELECT * FROM aranceles WHERE estado = 1";
@@ -56,17 +56,13 @@ require_once('./header.php');
                                         
                                     ?>
                                     <tr>
-                                    <td><?php echo $data['tipo']; ?></td>
-                                    <td><?php echo $data['valor']; ?></td>
-                                    <td><?php echo $data['descuento']; ?></td>
+                                    <td class="text-center"><?php echo $data['tipo']; ?></td>
+                                    <td class="text-center"><?php echo $data['valor']; ?></td>
+                                    <td class="text-center"><?php echo $data['descuento']; ?></td>
 									
-                                    <td>
-									<a href="aranceles.php?&id=<?php echo $id; ?>" class="btn btn-success btn-raised btn-xs" title="Editar">
-											<i class="zmdi zmdi-edit"></i>
-                                        </a>
-										<a href="funciones/del-aranceles.php?id=<?php echo $id; ?>" class="btn btn-danger btn-raised btn-xs" title="Borrar">
-											<i class="zmdi zmdi-delete"></i>
-										</a>
+                                    <td class="text-center">
+                                    <a href="aranceles.php?&id=<?php echo $id; ?>" title="Editar" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
+                                    <a href="funciones/del-aranceles.php?id=<?php echo $id; ?>" title="Eliminar" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a>
                                     </td>
                                         
                                 </tr>

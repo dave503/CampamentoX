@@ -186,16 +186,21 @@ if(!isset($_GET['id'])){
                     <div class="form-group ">
                                 <label>departamento</label>
                                
-                                <div class="form-group col-md-6 col-12">
-                                <input name="departamento" type="text" class="form-control" value="<?php echo $departamento ?>">
-                                <div class="invalid-feedback">
-
-                                  Inserte el departamento de el participantes
-                                </div>
-                              </div>
-
+                          
+                                    <label>Descuento</label>
+                                    <select name="descuento" class="form-control">
+                                    <option value="<?php echo $descuento; ?>"></option>
+                                    <option value="0.10">10%</option>
+                                    <option value="0.20">20%</option>
+                                    <option value="0.30">30%</option>
+                                    <option value="0.40">40%</option>
+                                    <option value="O">otro</option>
+                                    </select>
+                                    </div>
+                          
+                      
                             </div>
-                   
+                          </div>
                               
 
                               <div class="form-group col-md-6 col-12">

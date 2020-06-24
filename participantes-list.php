@@ -46,16 +46,16 @@ require_once('./header.php');
         <table class="table table-hover text-center" id="datos" width="100%">
 							<thead>
 								<tr>
-									
-									<th class="text-center">Nombre</th>
-									<th class="text-center">Apellido</th>
-                                    <th class="text-center">Sexo</th>
-                                    <th class="text-center">Direccion</th>
-                                    <th class="text-center">Departamento</th>
-                                    <th class="text-center">Edad</th>
-                                    <th class="text-center">Pago</th>
-                                    <th class="text-center">Telefono</th>
-                                    <th class="text-center">Accion</th>
+                                    
+                                    <th class="text-center">NOMBRE</th>
+                                    <th class="text-center">APELLIDO</th>
+                                    <th class="text-center">SEXO</th>
+                                    <th class="text-center">DIRECCION</th>
+                                    <th class="text-center">DEPARTAMENTO</th>
+                                    <th class="text-center">EDAD</th>
+                                    <th class="text-center">PAGO</th>
+                                    <th class="text-center">TELEFONO</th>
+                                    <th class="text-center">ACCION</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -72,22 +72,19 @@ require_once('./header.php');
                                           $id_part = $data['id_part'];
                                       ?>
                                     <tr>
-                                    <td><?php echo $data['nombre']; ?></td>
+                                    <td  ><?php echo $data['nombre']; ?></td>
                                     <td><?php echo $data['apellido']; ?></td>
                                     <td><?php echo $data['sexo']; ?></td>
                                     <td><?php echo $data['direccion']; ?></td>
 							                   		<td><?php echo $data['nombre']; ?></td>
                                     <td><?php echo $data['edad']; ?></td>
-                                    <td><?php echo $data['tipo']." $".$data['valor']; ?></td>
+                                    <td ><?php echo $data['tipo']." $".$data['valor']; ?></td>
                                     <td><?php echo $data['telefono']; ?></td>
 									
                                     <td>
-									<a href="participante.php?&tip=0&id=<?php echo $id_part; ?>" class="btn btn-success btn-raised btn-xs" title="Editar">
-											<i class="zmdi zmdi-edit"></i>
+									<a href="participante.php?&tip=0&id=<?php echo $id_part; ?>"title="Editar" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
                                         </a>
-										<a href="funciones/del-participante.php?tip=0&idid=<?php echo $id_part; ?>" class="btn btn-danger btn-raised btn-xs" title="Borrar">
-											<i class="zmdi zmdi-delete"></i>
-										</a>
+										<a href="funciones/del-participante.php?tip=0&idid=<?php echo $id_part; ?>"  title="Eliminar" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a>
                                     </td>
                                         
                                 </tr>
