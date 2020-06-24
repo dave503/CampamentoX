@@ -92,7 +92,7 @@ require_once('./header.php');
                               </div>
                             </div>
                             <div class="form-group">
-                                    <label>Select</label>
+                                    <label>Descuento</label>
                                     <select name="descuento" class="form-control">
                                     <option value="<?php echo $descuento; ?>"></option>
                                     <option value="0.10">10%</option>
@@ -103,6 +103,7 @@ require_once('./header.php');
                                     </select>
                                     </div>
                             </div>
+                      
                             </div>
                           </div>
                           <div class="card-footer text-right">

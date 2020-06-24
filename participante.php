@@ -64,6 +64,12 @@ if(!isset($_GET['id'])){
 
 
 ?>
+<body>
+  <div class="loader"></div>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+       <!-- Cabecera-->
 <div class="main-content">
         <section class="section">
           <div class="section-body">

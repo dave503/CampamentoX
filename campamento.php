@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+</html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campamento</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Campamentos</title>
 </head>
 <body>
 <?php 
@@ -31,24 +34,34 @@ require_once('./header.php');
 	$path = "funciones/mod-campamento.php";
 }
 
-
-
+  
 ?>
-  <div class="main-content">
+
+
+
+<body>
+  <div class="loader"></div>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+       <!-- Cabecera-->
+     
+       
+      <!-- Main Content -->
+      <div class="main-content">
         <section class="section">
           <div class="section-body">
-            <!-- Inicio de contenido -->
-
             <div class="container-fluid">
+
+            <div>
 			
-		</div>
-           
-              <div >
+
+              <div>
                 <div class="card">
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" href="campamento-list.php" role="tab" aria-selected="false">Lista de Campamento	</a>
+                      <a class="nav-link active" href="campamento-list.php" role="tab" aria-selected="false">Lista de Campamento	</a>
                       </li>
                         
                   
@@ -59,7 +72,7 @@ require_once('./header.php');
             
                     <div class="tab-content tab-bordered" id="myTab3Content">
                       <div class="tab-pane fade show active" id="settings" role="tabpanel" aria-labelledby="profile-tab2">
-                        <form action="<?php echo $path; ?>" method="POST"class="needs-validation">
+                      <form action="<?php echo $path; ?>" method="POST"class="needs-validation">
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
                           <div class="card-body">
                             <div class="row">
@@ -101,6 +114,17 @@ require_once('./header.php');
 
 
 
+            <!-- Fin del contenido -->
+          </div>
+          div
+        </section>
+      </div>
+
+
+</body>
+</html>
+       <!-- footers -->
 <?php require_once('./footer.php'); ?>
 </body>
+
 </html>

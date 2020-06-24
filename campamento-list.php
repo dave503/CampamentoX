@@ -1,9 +1,13 @@
+
+<!DOCTYPE html>
+<html lang="en">
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Lista de campamento</title>
+    <title>Campamentos</title>
 </head>
 <body>
 <?php 
@@ -13,9 +17,14 @@ require_once('./header.php');
      require_once('./cabecera.php'); 
     // Menu
  require_once('./menu.php');
-  
-?>
 
+?>
+<body>
+  <div class="loader"></div>
+  <div id="app">
+    <div class="main-wrapper main-wrapper-1">
+      <div class="navbar-bg"></div>
+       <!-- Cabecera-->
 	  <div class="main-content">
         <section class="section">
         <div    >
