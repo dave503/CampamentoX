@@ -37,11 +37,10 @@ require_once('./header.php');
 
                     </ul>
                     </div>
-                    <div class="container-fluid">
-			<div class="panel panel-info">
-     
-                  
-                    <table class="table table-hover text-center" id="datos" width="100%">
+                    <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-striped table-hover" id="tableExport" style="width:100%;">
+			
                           <thead>
 							                    	<tr>
 									

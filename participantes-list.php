@@ -42,8 +42,10 @@ require_once('./header.php');
 			  	</li>
                 
                     </ul>
+                    <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-striped table-hover" id="tableExport" style="width:100%;">
 			
-        <table class="table table-hover text-center" id="datos" width="100%">
 							<thead>
 								<tr>
                                     
