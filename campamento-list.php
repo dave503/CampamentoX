@@ -27,8 +27,10 @@ require_once('./header.php');
                       </li>
 
                     </ul>
+                    </div>
                     <div class="container-fluid">
 			<div class="panel panel-info">
+     
 			
         <table class="table table-hover text-center" id="datos" width="100%">
 							<thead>
