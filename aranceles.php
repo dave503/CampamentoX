@@ -119,7 +119,6 @@ require_once('./header.php');
 
             <!-- Fin del contenido -->
           </div>
-          div
         </section>
       </div>
 

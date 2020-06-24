@@ -12,10 +12,13 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+</html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Participantes</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Aranceles</title>
 </head>
 <body>
 
@@ -25,6 +28,7 @@ require_once('./header.php');
 require_once('./cabecera.php'); 
 // Menu
 require_once('./menu.php');
+
 
 if(!isset($_GET['id'])){
 	$nombre = "";
@@ -64,27 +68,31 @@ if(!isset($_GET['id'])){
 
 
 ?>
+
 <body>
+
   <div class="loader"></div>
   <div id="app">
     <div class="main-wrapper main-wrapper-1">
       <div class="navbar-bg"></div>
        <!-- Cabecera-->
-<div class="main-content">
+     
+       
+      <!-- Main Content -->
+      <div class="main-content">
         <section class="section">
           <div class="section-body">
-            <!-- Inicio de contenido -->
-
             <div class="container-fluid">
+
+            <div>
 			
-		</div>
-           
+
               <div>
                 <div class="card">
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" href="<?php echo $ruta;?>" role="tab" aria-selected="false">Lista de <?php echo $tip; ?>	</a>
+                      <a class="nav-link active" href="<?php echo $ruta;?>" role="tab" aria-selected="false">Lista de <?php echo $tip; ?>	</a>
                       </li>
                         
                   
@@ -97,124 +105,143 @@ if(!isset($_GET['id'])){
                       <div class="tab-pane fade show active" id="settings" role="tabpanel" aria-labelledby="profile-tab2">
                         <form action="<?php echo $path; ?>" method="POST"class="needs-validation">
                         <input type="hidden" name="id" value="<?php echo $id; ?>">
-                        
                           <div class="card-body">
                             <div class="row">
                               <div class="form-group col-md-6 col-12">
-                                <label>nombre</label>
-                                <input name="nombre" type="text" class="form-control" value="<?php echo $nombre ?>">
-                                <div class="invalid-feedback">
-                                  Inserte el nombre participante
-                                </div>
-                              </div>
-                              <div class="form-group col-md-6 col-12">
-                                <label>apellido</label>
-                                <input name="apellido" type="text" class="form-control" value="<?php echo $apellido ?>">
-                                <div class="invalid-feedback">
-                                  Inserte el apellido del participantes
-                                </div>
-                              </div>
-
-                              <div class="form-group col-md-6 col-12">
-                                <label>sexo</label>
-                                <input name="sexo" type="text" class="form-control" value="<?php echo $sexo ?>">
-                                <div class="invalid-feedback">
-                                  Inserte el sexo de el participantes
-                                </div>
-                              </div>
-
-                              <div class="form-group col-md-6 col-12">
-                                <label>telefono</label>
-                                <input name="telefono" type="text" class="form-control" value="<?php echo $telefono ?>">
-                                <div class="invalid-feedback">
-                                  Inserte el telefono de el participantes
-                                </div>
-                              </div>
-
-                                    <div class="form-group col-md-6 col-12">
-                                      <label>email</label>
-                                      <input name="email" type="text" class="form-control" value="<?php echo $email ?>">
-                                      <div class="invalid-feedback">
-                                        Inserte el email de el participantes
-                                      </div>
-                                    </div>
-                                <div class="form-group col-md-6 col-12">
-                                <label>edad</label>
-                                <input name="edad" type="text" class="form-control" value="<?php echo $edad ?>">
-                                <div class="invalid-feedback">
-                                  Inserte el edad de el participantes
-                                </div>
-                              </div>
-
-                              <div class="form-group col-md-6 col-12">
-                                <label>dui</label>
-                                <input name="dui" type="text" class="form-control" value="<?php echo $dui ?>">
-                                <div class="invalid-feedback">
-                                  Inserte el dui de el participantes
-                                </div>
-                              </div>
-
-
-                                 <div class="form-group col-md-6 col-12">
-                                <label>encargado</label>
-                                <input name="encargado" type="text" class="form-control" value="<?php echo $encargado ?>">
-                                <div class="invalid-feedback">
-                                  Inserte el encargado de el participantes
-                                </div>
-                              </div>
-
-                              
-                              <div class="form-group col-md-6 col-12">
-                                <label>pago</label>
-                                <input name="pago" type="text" class="form-control" value="<?php echo $pago ?>">
-                                <div class="invalid-feedback">
-                                  Inserte el pago de el participantes
-                                </div>
-                              </div>
-
-                              
-                              <div class="form-group col-md-6 col-12">
-										<div class="form-group label-floating">
-										  	<label class="control-label"></label>
-                          <select name="tipo" class="form-control" required>
-										<option selected value="<?php echo $_GET['tip']; ?>"><?php echo ucwords(strtolower($tip)); ?></option>
-									          	
-									        </select>
-										</div>
-				    				</div>
-                    
-                    <div class="form-group ">
-                                <label>departamento</label>
+                                <label>Nombre</label>
+                                <input value="<?php echo $nombre; ?>"class="form-control" type="text" name="nombre" required="" maxlength="30">
                                
-                          
-                                    <label>Descuento</label>
-                                    <select name="descuento" class="form-control">
-                                    <option value="<?php echo $descuento; ?>"></option>
-                                    <option value="0.10">10%</option>
-                                    <option value="0.20">20%</option>
-                                    <option value="0.30">30%</option>
-                                    <option value="0.40">40%</option>
-                                    <option value="O">otro</option>
-                                    </select>
-                                    </div>
-                          
-                      
+                              </div>
+                          		<div class="col-xs-12 col-sm-6">
+                                  <div class="form-group label-floating">
+                                      <label class="control-label">Apellidos </label>
+                                      <input value="<?php echo $apellido; ?>" class="form-control" type="text" name="apellido" required="" maxlength="30">
+                                  </div>
+				    			          	</div>
+
+                              <div class="col-xs-12 col-sm-6">
+                                    <div class="form-group label-floating">
+                                          <label class="control-label">Sexo </label>
+                                          <select name="sexo" class="form-control" required>
+                                                <option value="<?php echo $sexo; ?>"><?php echo $sexo; ?></option>
+                                                <option value="Femenino">Femenino</option>
+                                                <option value="Masculino">Masculino</option>
+                                                <option value="Otro">Otro</option>
+									                       </select>
+								                  		</div>
+                              </div>
+
+                              <div class="col-xs-12 col-sm-6">
+                                <div class="form-group label-floating">
+                                    <label class="control-label">Teléfono </label>
+                                    <input value="<?php echo $telefono; ?>" pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono" maxlength="15">
+                                </div>
+				    			        	</div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                 <div class="form-group label-floating">
+                                    <label class="control-label">E-mail</label>
+                                    <input value="<?php echo $email; ?>" class="form-control" type="email" name="email" maxlength="30">
+                                </div>
+				    			        	</div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                  <div class="form-group label-floating">
+                                      <label class="control-label">Edad </label>
+                                      <input value="<?php echo $edad; ?>" required pattern="[0-9+]{1,15}" class="form-control" type="text" name="edad" maxlength="2">
+                                  </div>    
+				    		         		</div>
+
+                             <div class="col-xs-12 col-sm-6">
+                                  <div class="form-group label-floating">
+                                      <label class="control-label">DUI </label>
+                                      <input value="<?php echo $dui; ?>" pattern="[0-9+]{1,15}" class="form-control" type="text" name="dui" maxlength="9">
+                                  </div>
+				    			        	</div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                  <div class="form-group label-floating">
+                                      <label class="control-label">Encargado</label>
+                                      <input value="<?php echo $encargado; ?>" class="form-control" type="text" name="encargado" maxlength="50">
+                                  </div>
+				    			        	</div>
+
+                            <div class="col-xs-12 col-sm-6">
+                                  <div class="form-group label-floating">
+                                      <label class="control-label">Pago </label>
+                                            <select name="pago" class="form-control" required>
+                                                <?php
+                                                $consulta = "SELECT * FROM aranceles WHERE estado = 1";
+                                                  $res = mysqli_query($connection,$consulta);
+                                                
+                                                  while ($data = mysqli_fetch_assoc($res)) {
+
+                                                ?>
+                                                <option value="">Seleccione</option>
+                                         <option value="<?php echo $data['id_aran']; ?>"><?php echo $data['tipo']." $".$data['valor']; ?></option>
+											  
+										                        	<?php } ?> 
+									                           </select> 
+										              </div>
+				    				        </div>
+
+                            <div class="col-xs-12 col-sm-6">
+									              	<div class="form-group label-floating">
+										              	<label class="control-label">Encargado</label>
+                                    
+                                        <select name="tipo" class="form-control" required>
+                                        
+                                                      
+                                              <option selected value="<?php echo $_GET['tip']; ?>"><?php echo ucwords(strtolower($tip)); ?></option>
+                                                      
+									                      </select>
+										             </div>
+				    			        	</div>
+
+                            <div class="col-xs-12 col-sm-6">
+									                 	<div class="form-group label-floating">
+										                         	<label class="control-label">Departamento </label>
+                                              <select name="departamento" class="form-control" required>
+                                                  <?php
+                                                  $consul = "SELECT * FROM departamento";
+                                                    $re = mysqli_query($connection,$consul);
+                                                  
+                                                    while ($dat = mysqli_fetch_assoc($re)) {
+                                                    
+                                                  ?>
+                                                  <option value="">Seleccione</option><option value="">Seleccione</option>
+                                              <option value="<?php echo $dat['id_dep']; ?>"><?php echo $dat['nombre']; ?></option>
+											  
+											                              	<?php } ?> 
+									                                 </select> 
+									             	  
+                                    </div>  
+				    		         		</div>
+
+                             <div class="col-xs-12 col-sm-6">
+                                  <div class="form-group label-floating">
+                                      <label class="control-label">Dirección</label>
+                                      <textarea name="direccion" class="form-control" rows="2" maxlength="100"><?php echo $direccion; ?></textarea>
+									                	</div>
+				    				          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                             </div>
+                          </div>
                             </div>
                           </div>
-                              
-
-                              <div class="form-group col-md-6 col-12">
-                                <label>direccion</label>
-                                <input name="direccion" type="text" class="form-control" value="<?php echo $direccion ?>">
-                                <div class="invalid-feedback">
-                                  Inserte la direccion de el participantes
-                                </div>
-                              </div>
-                            
-                            </div>
-                            </div>
-                            </div>
-                            </div>  
                           <div class="card-footer text-right">
                             <button class="btn btn-primary">Guardar Cambios</button>
                           </div>
@@ -224,7 +251,8 @@ if(!isset($_GET['id'])){
                   </div>
                 </div>
               </div>
-            </div>
+          
+
 
             <!-- Fin del contenido -->
           </div>
@@ -232,8 +260,10 @@ if(!isset($_GET['id'])){
       </div>
 
 
-
-<?php require_once('./footer.php'); ?>
-
 </body>
+</html>
+       <!-- footers -->
+<?php require_once('./footer.php'); ?>
+</body>
+
 </html>
