@@ -36,7 +36,7 @@ require_once('./header.php');
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" href="participante.php" role="tab" aria-selected="false">Nuevo Participante	</a>
+                        <a class="nav-link active" href="participante.php?tip=2" role="tab" aria-selected="false">Nuevo Lider	</a>
                       </li>
                         
                   
@@ -64,7 +64,8 @@ require_once('./header.php');
 			
 		</div>
                                     <?php 
-                                      $part = "SELECT p.id_part, p.nombre, p.apellido, p.sexo, p.direccion, d.nombre, p.edad, a.tipo, a.valor, p.telefono FROM participantes p INNER JOIN aranceles a ON p.pago = a.id_aran INNER JOIN departamento d ON p.departamento = d.id_dep WHERE p.tipo = 0 AND p.estado = 1";
+                                     $part = "SELECT * FROM participantes WHERE tipo = 2 AND estado = 1";
+                                        
 
                                         $result = mysqli_query($connection,$part);
    

@@ -12,13 +12,10 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-</html>
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Aranceles</title>
+    <title><?php echo $tip; ?></title>
 </head>
 <body>
 
@@ -31,19 +28,20 @@ require_once('./menu.php');
 
 
 if(!isset($_GET['id'])){
-	$nombre = "";
-    $apellido = "";
-    $sexo = "";
-    $telefono = "";
-    $email = "";
-    $edad = "";
-	$dui =   
-	$encargado = "";
-    $pago = "";
-	$direccion = "";
-	$departamento = "";
-	$tipo = "";
-	$titulo = "NUEVO";
+  $nombre = "";
+  $apellido = "";
+  $sexo = "";
+  $telefono = "";
+  $email = "";
+  $edad = "";
+$dui =   
+$encargado = "";
+  $pago = "";
+$direccion = "";
+$departamento = "";
+$tipo = "";
+$titulo = "NUEVO";
+
 	$path = "funciones/add-participantes.php";
 }else{
 	$id = $_GET['id'];
@@ -209,7 +207,7 @@ if(!isset($_GET['id'])){
                                                     while ($dat = mysqli_fetch_assoc($re)) {
                                                     
                                                   ?>
-                                                  <option value="">Seleccione</option><option value="">Seleccione</option>
+                                               
                                               <option value="<?php echo $dat['id_dep']; ?>"><?php echo $dat['nombre']; ?></option>
 											  
 											                              	<?php } ?> 

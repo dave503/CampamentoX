@@ -35,7 +35,7 @@ require_once('./header.php');
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" href="participante.php" role="tab" aria-selected="false">Nuevo Administrador	</a>
+                        <a class="nav-link active" href="participante.php?tip=1" role="tab" aria-selected="false">Nuevo Administrador	</a>
                       </li>
                         
                   
