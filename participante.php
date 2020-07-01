@@ -220,7 +220,7 @@ $titulo = "NUEVO";
                                                     
                                                   ?>
                                                
-                                              <option value="<?php echo $dat['id_dep']; ?>"><?php echo $dat['nombre']; ?></option>
+                                              <option value="<?php echo $dat['id_dep']; ?>"><?php echo $dat['nombre_dep']; ?></option>
 											  
 											                              	<?php } ?> 
 									                                 </select> 

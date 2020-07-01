@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Lideres</title>
+    <title>Admiistradores</title>
 </head>
 <body>
     <?php
@@ -15,14 +15,13 @@ require_once('./header.php');
  require_once('./menu.php');
   
     ?>
-<body>
+    <body>
   <div class="loader"></div>
   <div id="app">
     <div class="main-wrapper main-wrapper-1">
       <div class="navbar-bg"></div>
        <!-- Cabecera-->
-
-	   <div class="main-content">
+  <div class="main-content">
         <section class="section">
           <div class="section-body">
             <!-- Inicio de contenido -->
@@ -43,6 +42,7 @@ require_once('./header.php');
 			  	</li>
                 
                     </ul>
+       
                     <div class="card-body">
                     <div class="table-responsive">
                       <table class="table table-striped table-hover" id="tableExport" style="width:100%;">
@@ -50,16 +50,16 @@ require_once('./header.php');
 							<thead>
 								<tr>
 									
-
-                                    <th class="text-center">NOMBRE</th>
-                                    <th class="text-center">APELLIDO</th>
-                                    <th class="text-center">SEXO</th>
-                                    <th class="text-center">DIRECCION</th>
-                                    <th class="text-center">DEPARTAMENTO</th>
-                                    <th class="text-center">EDAD</th>
-                                    <th class="text-center">PAGO</th>
-                                    <th class="text-center">TELEFONO</th>
-                                    <th class="text-center">ACCION</th>
+                                    <th class="text-center">Nombre</th>
+                                    <th class="text-center">Apellido</th>
+                                    <th class="text-center">Sexo</th>
+                                    <th class="text-center">Direccion</th>
+                                    <th class="text-center">Departamento</th>
+                                    <th class="text-center">Edad</th>
+                                    <th class="text-center">Pago</th>
+                                    <th class="text-center">Telefono</th>
+                                    <th class="text-center">ACCIONES</th>
+                        
 								</tr>
 							</thead>
 							<tbody>
@@ -67,11 +67,12 @@ require_once('./header.php');
 			
 		</div>
                                     <?php 
-                                               $part =  "SELECT p.id_part, p.nombre, p.apellido, p.sexo, p.direccion,  d.nombre_dep, p.edad, a.tipo, 
-                                               a.valor, p.telefono FROM 
-                                               participantes p INNER JOIN aranceles a ON p.pago = a.id_aran INNER JOIN 
-                                               departamento d ON p.departamento = d.id_dep WHERE p.tipo = 2 AND p.estado = 1";
-                                        
+                                 
+                                 $part =  "SELECT p.id_part, p.nombre, p.apellido, p.sexo, p.direccion,  d.nombre_dep, p.edad, a.tipo, 
+                                 a.valor, p.telefono FROM 
+                                 participantes p INNER JOIN aranceles a ON p.pago = a.id_aran INNER JOIN 
+                                 departamento d ON p.departamento = d.id_dep WHERE p.tipo = 2 AND p.estado = 1";
+                          
 
                                         $result = mysqli_query($connection,$part);
    
@@ -90,7 +91,8 @@ require_once('./header.php');
                                     <td><?php echo $data['telefono']; ?></td>
                                     <td>
                                     <a href="participante.php?tip=2&id=<?php echo $id_part; ?>" title="Editar" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
-                                        <a href="funciones/del-participante.php?id=<?php echo $id_part; ?>" title="Eliminar" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a>
+                                        </a>
+                                        <a href="funciones/del-participante.php?id=<?php echo $id_part; ?>"  title="Eliminar" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a></a>
                                     </td>
                                         
                                 </tr>
