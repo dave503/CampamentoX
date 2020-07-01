@@ -1,5 +1,5 @@
 <?php
-	if($_GET['tip']==0){
+	if($_GET['tip']==3){
 		$tip= "Participante";
 		$ruta = "participantes-list.php";
 	}elseif($_GET['tip']==1){
@@ -8,7 +8,19 @@
 	}else{
 		$tip = "Lider";
 		$ruta = "lideres.php";
-	}
+  }
+  
+/*
+  if ($_GET['tip']==1) {
+    $tip = "Admin";
+		$ruta = "admin.php";
+  }elseif($_GET['tip']==2){
+		$tip = "Lider";
+		$ruta = "lideres.php";
+  }else {
+  	$tip= "Participante";
+		$ruta = "participantes-list.php";
+  }*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +46,7 @@ if(!isset($_GET['id'])){
   $telefono = "";
   $email = "";
   $edad = "";
-$dui =   
+$dui =   "";
 $encargado = "";
   $pago = "";
 $direccion = "";

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Participantes</title>
+    <title>Lideres</title>
 </head>
 <body>
     <?php
@@ -67,7 +67,10 @@ require_once('./header.php');
 			
 		</div>
                                     <?php 
-                                     $part = "SELECT * FROM participantes WHERE tipo = 2 AND estado = 1";
+                                               $part =  "SELECT p.id_part, p.nombre, p.apellido, p.sexo, p.direccion,  d.nombre_dep, p.edad, a.tipo, 
+                                               a.valor, p.telefono FROM 
+                                               participantes p INNER JOIN aranceles a ON p.pago = a.id_aran INNER JOIN 
+                                               departamento d ON p.departamento = d.id_dep WHERE p.tipo = 2 AND p.estado = 1";
                                         
 
                                         $result = mysqli_query($connection,$part);
@@ -77,14 +80,14 @@ require_once('./header.php');
                                           $id_part = $data['id_part'];
                                       ?>
                                     <tr>
-                                    <td><?php echo $data['nombre']; ?></td>
+                                    <td  ><?php echo $data['nombre']; ?></td>
                                     <td><?php echo $data['apellido']; ?></td>
                                     <td><?php echo $data['sexo']; ?></td>
                                     <td><?php echo $data['direccion']; ?></td>
+							                   		<td><?php echo $data['nombre_dep']; ?></td>
                                     <td><?php echo $data['edad']; ?></td>
-                                    <td><?php echo $data['tipo']; ?></td>
+                                    <td ><?php echo $data['tipo']." $".$data['valor']; ?></td>
                                     <td><?php echo $data['telefono']; ?></td>
-									
                                     <td>
                                     <a href="participante.php?tip=2&id=<?php echo $id_part; ?>" title="Editar" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
                                         <a href="funciones/del-participante.php?id=<?php echo $id_part; ?>" title="Eliminar" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a>

@@ -28,12 +28,12 @@
 
     if($result == 1){
         
-        if($tipo == 0){
-            header('Location: ../participantes-list.php');
-        }elseif ($tipo == 1) {
+        if($tipo == 1){
             header('Location: ../admin.php');
-        }elseif ($tipo==2) {
+        }elseif ($tipo == 2) {
             header('Location: ../lideres.php');
+        }elseif ($tipo==3) {
+            header('Location: ../participantes-list.php');
         }else{
             header('Location: ../home.php');
         }
