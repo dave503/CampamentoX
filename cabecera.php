@@ -16,8 +16,14 @@
               </a></li>
           </ul>
         </div>
+        <?php if($row['foto']=="null" || $row['foto']==""){
+                      $fotoP="./assets/img/".$row['sexo'].".png";
+                    }else{
+                      $fotoP = "./files/".$row['foto'];
+                    }
+                    ?>
         <ul class="navbar-nav navbar-right">
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="./files/<?php echo $row['foto']; ?>" class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="<?php echo $fotoP; ?>" class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
               <div class="dropdown-title">Hola <?php echo $row['nombre']." ".$row['apellido']; ?></div>
               <a href="./perfil.php" class="dropdown-item has-icon"> <i class="far

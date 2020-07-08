@@ -19,7 +19,8 @@
                 <div class="card author-box">
                   <div class="card-body">
                     <div class="author-box-center">
-                      <img alt="image" src="./files/<?php echo $row['foto']; ?>" class="rounded-circle author-box-picture">
+                  
+                      <img alt="image" src="<?php echo $fotoP; ?>" class="rounded-circle author-box-picture">
                       <div class="clearfix"></div>
                       <div class="author-box-name">
                         <a href="#"><?php echo $row['nombre']." ".$row['apellido']; ?></a>
@@ -130,17 +131,17 @@
                             </div>
                             </div>
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Cambiar foto</label>
-                                <div class="col-sm-12 col-md-7">
-                                  <div id="image-preview" class="image-preview">
-                                    <label for="image-upload" id="image-label">Buscar foto</label>
-                                    <input type="file" name="image" id="image-upload" value="./files/<?php echo $row['foto']; ?>">
-                                  </div>
+                              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto de perfil</label>
+                              <div class="col-sm-12 col-md-7">
+                                <div id="image-preview" class="image-preview">
+                                  <label for="image-upload" id="image-label">Buscar foto</label>
+                                  <input type="file" name="image" id="image-upload" value="./files/<?php echo $row['foto']; ?>">
                                 </div>
                               </div>
-                          </div>
+                            </div>
+                            
                           <div class="card-footer text-right">
-                            <input type="submit" value="Guardar cambios" class="btn btn-primary">
+                            <input type="submit" name="ok" value="Guardar cambios" class="btn btn-primary">
                           </div>
                         </form>
                         
