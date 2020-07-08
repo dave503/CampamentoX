@@ -20,9 +20,9 @@
             <li class="dropdown">
               <a href="admin.php" class="menu-toggle nav-link has-dropdown"><i data-feather="briefcase"></i><span>Administracion</span></a>
               <ul class="dropdown-menu">
-                <li><a class="nav-link" href="campamento.php">Campamentos</a></li>
-                <li><a class="nav-link" href="aranceles.php">Aranceles</a></li>
-                <li><a class="nav-link" href="">Usuarios</a></li>
+                <li><a class="nav-link" href="campamento-list.php">Campamentos</a></li>
+                <li><a class="nav-link" href="aranceles-list.php">Aranceles</a></li>
+               
               </ul>
             </li>
           </ul>

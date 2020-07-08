@@ -1,6 +1,7 @@
 <?php
     include '../dbcon.php';
-    
+    include './session.php';
+
     $id = $_POST['id'];
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
@@ -21,16 +22,35 @@
 
     if($result == 1){
         
+        mysqli_query($connection,"INSERT INTO bitacora(concepto, fecha_registro, id_part) VALUES ('Modificacion de la tabla participante, el registro $id', NOW(), '$_SESSION[id]')") or die (mysqli_error($connection));
+
         if($tipo == 1){
-            header('Location: ../admin.php');
+            echo   "<script '>
+                            alert('Actulizacion de  Administrador existosamente!');
+                            window.location.href='../admin.php'
+                </script>";
+            //header('Location: ../admin.php');
         }elseif ($tipo == 2) {
-            header('Location: ../lideres.php');
+            echo   "<script '>
+            alert('Actulizacion de  Lider existosamente!');
+            window.location.href='../lideres.php'
+        </script>";
+           // header('Location: ../lideres.php');
         }elseif ($tipo==3) {
-            header('Location: ../participantes-list.php');
+            echo   "<script '>
+            alert('Actulizacion de  PArticipante existosamente!');
+            window.location.href='../participantes-list.php'
+        </script>";
+            //header('Location: ../participantes-list.php');
         }else{
             header('Location: ../home.php');
         }
     }else{
-        echo "Fallo al guardar";
+         echo   "<script '>
+            alert('Fallo al guardar!');
+           
+        </script>";
     }
+
+
 ?>

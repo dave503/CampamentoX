@@ -234,20 +234,6 @@ $titulo = "NUEVO";
                                       <textarea name="direccion" class="form-control" rows="2" maxlength="100"><?php echo $direccion; ?></textarea>
 									                	</div>
 				    				          </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                              </div>
                           </div>
                             </div>

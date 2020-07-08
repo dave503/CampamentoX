@@ -21,6 +21,7 @@ require_once('./header.php');
 	$tipo = "";
     $valor = "";
     $descuento = "";
+    $campamento ="";
 	$titulo = "NUEVO";
 	$path = "funciones/add-aranceles.php";
 }else{
@@ -31,6 +32,7 @@ require_once('./header.php');
 	$tipo = $row['tipo'];
     $valor = $row['valor'];
     $descuento = $row['descuento'];
+    $campamento= $row['campamento'];
 	$titulo = "MODIFICAR";
 	$path = "funciones/mod-aranceles.php";
 }
@@ -90,9 +92,10 @@ require_once('./header.php');
                                   Inserte su valor
                                 </div>
                               </div>
-                            </div>
-                            <div class="form-group">
+
+                                   <div class="form-group col-sm-6 col-12">
                                     <label>Descuento</label>
+
                                     <select name="descuento" class="form-control">
                                     <option value="<?php echo $descuento; ?>"></option>
                                     <option value="0.10">10%</option>
@@ -102,7 +105,35 @@ require_once('./header.php');
                                     <option value="O">otro</option>
                                     </select>
                                     </div>
+                                    <div class="form-goup col-sm-6 col-12">
+                                    <label>campamento</label>
+                                    <select name="campamento" class="form-control">
+                                    <?php
+                                          $consul = "SELECT * FROM campamento";
+                                           $re = mysqli_query($connection,$consul);      
+                                           while ($dat = mysqli_fetch_assoc($re)) {
+                                                            
+                                        ?>
+                                               
+                             <option value="<?php echo $dat['id_camp']; ?>"><?php echo $dat['lugar']; ?></option>
+											  
+											                    	<?php } ?> 
+                                
+                                    </select>
+                                    </div>
                             </div>
+                            
+                            </div>
+
+                            </div>
+                       
+
+                       
+
+
+
+
+
                       
                             </div>
                           </div>

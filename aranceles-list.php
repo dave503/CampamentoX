@@ -39,6 +39,7 @@ require_once('./header.php');
                                     <th class="text-center">TIPO</th>
                                     <th class="text-center">VALOR</th>
                                   <th class="text-center">DESCUENTO</th>
+                                  <th class="text-center">Campamento</th>
                                   <th class="text-center">ACCION</th>
                                   </tr>
                                   </thead>
@@ -47,7 +48,11 @@ require_once('./header.php');
         
 		</div>
                                     <?php 
-                                        $part = "SELECT * FROM aranceles WHERE estado = 1";
+                                        $part = " SELECT a.id_aran, a.tipo, a.valor, a.descuento, c.lugar
+                                        FROM aranceles a
+                                        inner join campamento c on a.camp = c.id_camp
+                                        
+                                        WHERE  a.estado = 1";
                                         $result = mysqli_query($connection,$part);
                                           
                                         while ($data = mysqli_fetch_assoc($result)) {
@@ -59,6 +64,7 @@ require_once('./header.php');
                                     <td class="text-center"><?php echo $data['tipo']; ?></td>
                                     <td class="text-center"><?php echo $data['valor']; ?></td>
                                     <td class="text-center"><?php echo $data['descuento']; ?></td>
+                                    <td class="text-center"><?php echo $data['lugar']; ?></td>
 									
                                     <td class="text-center">
                                     <a href="aranceles.php?&id=<?php echo $id; ?>" title="Editar" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
