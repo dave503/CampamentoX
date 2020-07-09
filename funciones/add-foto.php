@@ -1,5 +1,7 @@
 <?php 
     include('./dbcon.php');
+    include '../funciones/session.php';
+    
     $nombre = $_POST['nombre'];
     $apellido = $_POST['apellido'];
     $pass = $_POST['contra'];
@@ -24,9 +26,15 @@
         }
 
         $query = "UPDATE participantes SET nombre = '$nombre', apellido='$apellido',contra='$pass', foto='$foto', fecha_mod=NOW() WHERE id_part = '$id'";
-            $result = mysqli_query($connection,$query) or die (mysqli_error());
+            $result = mysqli_query($connection,$query) or die (mysqli_error($connection));
 
             if($result == 1){
+
+                mysqli_query($connection,"INSERT INTO bitacora(concepto, fecha_registro, id_part) VALUES ('Actualizando perfil de la tabla Usuario, el registro ', NOW(), '$_SESSION[id]')") or die (mysqli_error($connection));
+                echo   "<script '>
+                         alert('Datos Actualizados  existosamente!');
+                         window.location.href='  ../perfil.php'
+                     </script>";
                 if($tipo == 0){
                     header('Location: ../perfil.php');
                 }
