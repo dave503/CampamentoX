@@ -94,30 +94,44 @@
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" id="profile-tab2" data-toggle="tab" href="#settings" role="tab" aria-selected="false">Editar perfil</a>
+                        <a class="nav-link active" id="profile-tab2" data-toggle="tab" href="#settings" role="tab" aria-selected="false">Editar Informacion</a>
                       </li>
                     </ul>
                     <div class="tab-content tab-bordered" id="myTab3Content">
                       <div class="tab-pane fade show active" id="settings" role="tabpanel" aria-labelledby="profile-tab2">
-                        <form action="./funciones/add-foto.php" method="post" class="needs-validation" enctype="multipart/form-data" name="foo">
+                        <form action="./funciones/add-informacion.php" method="post" class="needs-validation" enctype="multipart/form-data" name="foo">
                           <input type="hidden" name="id" value="<?php echo $row['id_part'];?>">
                           <div class="card-body">
                             <div class="row">
-                            
-                            
-                            </div>
-                     
-                            </div>
-                            <div class="form-group row mb-4">
-                              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto de perfil</label>
-                              <div class="col-sm-12 col-md-7">
-                                <div id="image-preview" class="image-preview">
-                                  <label for="image-upload" id="image-label">Buscar foto</label>
-                                  <input type="file" name="image" id="image-upload" value="./files/<?php echo $row['foto']; ?>">
+                              <div class="form-group col-md-6 col-12">
+                                <label>Nombre</label>
+                                <input name="nombre" type="text" class="form-control" value="<?php echo $row['nombre']; ?>">
+                                <div class="invalid-feedback">
+                                  Inserte su nombre
+                                </div>
+                              </div>
+                              <div class="form-group col-md-6 col-12">
+                                <label>Apellido</label>
+                                <input name="apellido" type="text" class="form-control" value="<?php echo $row['apellido']; ?>">
+                                <div class="invalid-feedback">
+                                  Inserte su apellido
                                 </div>
                               </div>
                             </div>
+                            <div class="row">
+                              <div class="form-group col-md-6 col-12">
+                                <label>Contraseña</label>
+                                <input name="contra" type="password" class="form-control" value="<?php echo $row['contra']; ?>">
+                              </div>
+                              
+                              <div class="form-group col-md-6 col-12">
+                                <label>Confirmar contraseña</label>
+                                <input name="contra_conf" type="password" class="form-control" value="<?php echo $row['contra']; ?>">
+                              </div>
                             </div>
+                            </div>
+                            </div>
+                       
                             
                           <div class="card-footer text-right">
                             <input type="submit" name="ok" value="Guardar cambios" class="btn btn-primary">

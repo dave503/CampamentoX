@@ -29,7 +29,7 @@
               <a href="./perfil.php" class="dropdown-item has-icon"> <i class="far
 										fa-user"></i> Perfil
               
-              </a> <a href="" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
+              </a> <a href="informacion.php" class="dropdown-item has-icon"> <i class="fas fa-cog"></i>
                 Configuracion
               </a>
               <div class="dropdown-divider"></div>

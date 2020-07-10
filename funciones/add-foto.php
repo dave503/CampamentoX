@@ -25,12 +25,12 @@
           $foto = null;
         }
 
-        $query = "UPDATE participantes SET nombre = '$nombre', apellido='$apellido',contra='$pass', foto='$foto', fecha_mod=NOW() WHERE id_part = '$id'";
+        $query = "UPDATE participantes SET  foto='$foto', fecha_mod=NOW() WHERE id_part = '$id'";
             $result = mysqli_query($connection,$query) or die (mysqli_error($connection));
 
             if($result == 1){
 
-                mysqli_query($connection,"INSERT INTO bitacora(concepto, fecha_registro, id_part) VALUES ('Actualizando perfil de la tabla Usuario, el registro ', NOW(), '$_SESSION[id]')") or die (mysqli_error($connection));
+                mysqli_query($connection,"INSERT INTO bitacora(concepto, fecha_registro, id_part) VALUES ('Actualizando  Foto de perfil de la tabla Usuario, el registro ', NOW(), '$_SESSION[id]')") or die (mysqli_error($connection));
                 echo   "<script '>
                          alert('Datos Actualizados  existosamente!');
                          window.location.href='  ../perfil.php'
