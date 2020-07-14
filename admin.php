@@ -40,7 +40,7 @@ require_once('./header.php');
                       </li>
                         
                   
-			  	</li>
+			  
                 
                     </ul>
        

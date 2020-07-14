@@ -1,5 +1,5 @@
 <?php require_once('./header.php'); //Header ?>
-<link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
+ <link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
 <body>
   <div class="loader"></div>
   <div id="app">
