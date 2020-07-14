@@ -10,11 +10,64 @@
       <!-- Menu-->
       <?php require_once('./menu.php'); ?>
       <!-- Main Content -->
-      <div class="main-content">
-        <section class="section">
-          <div class="section-body">
+    
             <!-- Inicio de contenido -->
             
+
+            <div class="main-content">
+        <section class="section">
+          <div class="section-body">
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-header">
+                
+                  </div>
+            <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-striped table-hover" id="tableExport" style="width:100%;">
+			
+                          <thead>
+                            <tr>
+                                    
+                                    <th class="text-center">ULTIIMA MODIFICACION</th>
+                                    <th class="text-center">FECHA</th>
+                                  <th class="text-center">NOMBRE</th>
+                                  <th class="text-center">AEPLLDIO </th>
+                                  
+                                  </tr>
+                                  </thead>
+                                  <tbody>
+                                  <div class="container-fluid">
+        
+		</div>
+                                    <?php 
+                                        $part = "SELECT bitacora.id_con, bitacora.concepto, bitacora.fecha_registro,   participantes.nombre, participantes.apellido
+                                        FROM bitacora
+                                          inner JOIN participantes ON bitacora.id_part = participantes.id_part
+                                        
+                                          WHERE  participantes.estado = 1";
+                                        $result = mysqli_query($connection,$part);
+                                          
+                                        while ($data = mysqli_fetch_assoc($result)) {
+                                        
+                                        $id = $data['id_con'];
+                                        
+                                    ?>
+                                    <tr>
+                                    <td class="text-center"><?php echo $data['concepto']; ?></td>
+                                    <td class="text-center"><?php echo $data['fecha_registro']; ?></td>
+                                    <td class="text-center"><?php echo $data['nombre']; ?></td>
+                                    <td class="text-center"><?php echo $data['apellido']; ?></td>
+									
+                                  
+                                </tr>
+                                <?php } ?>
+							</tbody>
+						</table>
+	
+        </section>
+      </div>
 
             <?php echo "Hola " .$row['nombre']; ?>
             <!-- Fin del contenido -->
