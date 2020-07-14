@@ -1,5 +1,5 @@
 <div class="main-sidebar sidebar-style-2">
-  
+<link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
             <a href="home.php"> <span class="logo-name">CampamentoX</span>

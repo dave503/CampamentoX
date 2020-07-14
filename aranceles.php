@@ -78,14 +78,14 @@ require_once('./header.php');
                             <div class="row">
                               <div class="form-group col-md-6 col-12">
                                 <label>tipo</label>
-                                <input name="tipo" type="text" class="form-control" value="<?php echo $tipo ?>">
+                                <input name="tipo" type="text" class="form-control" value="<?php echo $tipo ?>" required>
                                 <div class="invalid-feedback">
                                   Inserte su tipo de pago
                                 </div>
                               </div>
                               <div class="form-group col-md-6 col-12">
                                 <label>Valor</label>
-                                <input name="valor" type="text" class="form-control" value="<?php echo $valor ?>">
+                                <input name="valor" type="text" class="form-control" value="<?php echo $valor ?>" required>
                                 <div class="invalid-feedback">
                                   Inserte su valor
                                 </div>
@@ -94,7 +94,7 @@ require_once('./header.php');
                                    <div class="form-group col-sm-6 col-12">
                                     <label>Descuento</label>
 
-                                    <select name="descuento" class="form-control">
+                                    <select name="descuento" class="form-control" required>
                                     <option value="<?php echo $descuento; ?>"></option>
                                     <option value="0.10">10%</option>
                                     <option value="0.20">20%</option>
@@ -105,7 +105,7 @@ require_once('./header.php');
                                     </div>
                                     <div class="form-goup col-sm-6 col-12">
                                     <label>campamento</label>
-                                    <select name="campamento" class="form-control">
+                                    <select name="campamento" class="form-control" required>
                                     <?php
                                           $consul = "SELECT * FROM campamento";
                                            $re = mysqli_query($connection,$consul);      

@@ -27,6 +27,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
     <title><?php echo $tip; ?></title>
 </head>
 <body>
@@ -144,14 +145,14 @@ $titulo = "NUEVO";
                               <div class="col-xs-12 col-sm-6">
                                 <div class="form-group label-floating">
                                     <label class="control-label">Teléfono </label>
-                                    <input value="<?php echo $telefono; ?>" pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono" maxlength="15">
+                                    <input value="<?php echo $telefono; ?>" pattern="[0-9+]{1,15}" class="form-control" type="text" name="telefono" maxlength="15" required>
                                 </div>
 				    			        	</div>
 
                             <div class="col-xs-12 col-sm-6">
                                  <div class="form-group label-floating">
                                     <label class="control-label">E-mail</label>
-                                    <input value="<?php echo $email; ?>" class="form-control" type="email" name="email" maxlength="30">
+                                    <input value="<?php echo $email; ?>" class="form-control" type="email" name="email" maxlength="30" required>
                                 </div>
 				    			        	</div>
 
@@ -165,14 +166,14 @@ $titulo = "NUEVO";
                              <div class="col-xs-12 col-sm-6">
                                   <div class="form-group label-floating">
                                       <label class="control-label">DUI </label>
-                                      <input value="<?php echo $dui; ?>" pattern="[0-9+]{1,15}" class="form-control" type="text" name="dui" maxlength="9">
+                                      <input value="<?php echo $dui; ?>" pattern="[0-9+]{1,15}" class="form-control" type="text" name="dui" maxlength="9"required>
                                   </div>
 				    			        	</div>
 
                             <div class="col-xs-12 col-sm-6">
                                   <div class="form-group label-floating">
                                       <label class="control-label">Encargado</label>
-                                      <input value="<?php echo $encargado; ?>" class="form-control" type="text" name="encargado" maxlength="50">
+                                      <input value="<?php echo $encargado; ?>" class="form-control" type="text" name="encargado" maxlength="50"required>
                                   </div>
 				    			        	</div>
 
@@ -231,7 +232,7 @@ $titulo = "NUEVO";
                              <div class="col-xs-12 col-sm-6">
                                   <div class="form-group label-floating">
                                       <label class="control-label">Dirección</label>
-                                      <textarea name="direccion" class="form-control" rows="2" maxlength="100"><?php echo $direccion; ?></textarea>
+                                      <textarea name="direccion" class="form-control" rows="2" required maxlength="100"><?php echo $direccion; ?></textarea>
 									                	</div>
 				    				          </div>
                              </div>

@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-</html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
     <title>Campamentos</title>
 </head>
 <body>
@@ -78,14 +77,14 @@ require_once('./header.php');
                             <div class="row">
                               <div class="form-group col-md-6 col-12">
                                 <label>Lugar</label>
-                                <input name="lugar" type="text" class="form-control" value="<?php echo $lugar ?>">
+                                <input name="lugar" type="text" class="form-control" value="<?php echo $lugar ?>"required>
                                 <div class="invalid-feedback">
                                   Inserte el lugar de el Campamento
                                 </div>
                               </div>
                               <div class="form-group col-md-6 col-12">
                                 <label>Fecha</label>
-                                <input name="fecha" type="date" class="form-control" value="<?php echo $fecha ?>">
+                                <input name="fecha" type="date" class="form-control" value="<?php echo $fecha ?>"required>
                                 <div class="invalid-feedback">
                                   Inserte la feha de inscripcion
                                 </div>
