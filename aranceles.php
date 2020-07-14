@@ -4,8 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+ 
     <title>Aranceles</title>
 </head>
 <body>
@@ -38,8 +37,6 @@ require_once('./header.php');
 }
   
 ?>
-
-
 
 <body>
   <div class="loader"></div>
@@ -96,7 +93,7 @@ require_once('./header.php');
                                    <div class="form-group col-sm-6 col-12">
                                     <label>Descuento</label>
 
-                                    <select name="descuento" class="form-control">
+                                    <select name="descuento" class="form-control" required>
                                     <option value="<?php echo $descuento; ?>"></option>
                                     <option value="0.10">10%</option>
                                     <option value="0.20">20%</option>
@@ -107,7 +104,7 @@ require_once('./header.php');
                                     </div>
                                     <div class="form-goup col-sm-6 col-12">
                                     <label>campamento</label>
-                                    <select name="campamento" class="form-control">
+                                    <select name="campamento" class="form-control" required>
                                     <?php
                                           $consul = "SELECT * FROM campamento";
                                            $re = mysqli_query($connection,$consul);      

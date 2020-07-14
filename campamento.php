@@ -97,7 +97,7 @@ require_once('./header.php');
                                             
                             </div>
                           <div class="card-footer text-right">
-                            <button class="btn btn-primary">Guardar Cambios</button>
+                            <button class="btn btn-primary" id="swal-2">Guardar Cambios</button>
                           </div>
                         </form>
                       </div>

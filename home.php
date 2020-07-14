@@ -14,9 +14,9 @@
         <section class="section">
           <div class="section-body">
             <!-- Inicio de contenido -->
+            
 
-            <?php echo "Hola: ".$_SESSION['id']; ?>
-
+            <?php echo "Hola " .$row['nombre']; ?>
             <!-- Fin del contenido -->
           </div>
         </section>

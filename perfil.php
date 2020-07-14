@@ -113,7 +113,7 @@
                               <div class="col-sm-12 col-md-7">
                                 <div id="image-preview" class="image-preview">
                                   <label for="image-upload" id="image-label">Buscar foto</label>
-                                  <input type="file" name="image" id="image-upload" value="./files/<?php echo $row['foto']; ?>">
+                                  <input type="file" name="image" id="image-upload" required="" value="./files/<?php echo $row['foto']; ?>">
                                 </div>
                               </div>
                             </div>
