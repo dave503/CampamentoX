@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-</html>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
+<link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
     <title>Aranceles</title>
 </head>
 <body>
