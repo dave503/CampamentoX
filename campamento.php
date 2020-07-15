@@ -1,17 +1,13 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
-    <title>Campamentos</title>
-</head>
-<body>
+
 <?php 
 //estilos
 require_once('./header.php');
-     // Cabecera
+?>
+<title>Campamento</title>
+<body>
+<?php
+// Cabecera
      require_once('./cabecera.php'); 
     // Menu
  require_once('./menu.php');

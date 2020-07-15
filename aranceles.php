@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
- 
-    <title>Aranceles</title>
-</head>
-<body>
+
+
 <?php 
 //estilos
 require_once('./header.php');
-     // Cabecera
+?>
+<title>Aranceles</title>
+<body>    
+<?php
+// Cabecera
      require_once('./cabecera.php'); 
     // Menu
  require_once('./menu.php');

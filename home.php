@@ -1,5 +1,4 @@
 <?php require_once('./header.php'); //Header ?>
- <link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
 <body>
   <div class="loader"></div>
   <div id="app">
@@ -34,6 +33,7 @@
                                     <th class="text-center">FECHA</th>
                                   <th class="text-center">NOMBRE</th>
                                   <th class="text-center">AEPLLDIO </th>
+                                  <th class="text-center"> USUARIO</th>
                                   
                                   </tr>
                                   </thead>
@@ -42,7 +42,7 @@
         
 		</div>
                                     <?php 
-                                        $part = "SELECT bitacora.id_con, bitacora.concepto, bitacora.fecha_registro,   participantes.nombre, participantes.apellido
+                                        $part = "SELECT bitacora.id_con, bitacora.concepto, bitacora.fecha_registro, participantes.usuario,  participantes.nombre, participantes.apellido
                                         FROM bitacora
                                           inner JOIN participantes ON bitacora.id_part = participantes.id_part
                                         
@@ -55,10 +55,12 @@
                                         
                                     ?>
                                     <tr>
-                                    <td class="text-center"><?php echo $data['concepto']; ?></td>
+                                    <td><?php echo $data['concepto']; ?></td>
                                     <td class="text-center"><?php echo $data['fecha_registro']; ?></td>
                                     <td class="text-center"><?php echo $data['nombre']; ?></td>
                                     <td class="text-center"><?php echo $data['apellido']; ?></td>
+                                    <td class="text-center"><?php echo $data['usuario']; ?></td>
+                                    
 									
                                   
                                 </tr>
