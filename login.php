@@ -25,6 +25,9 @@
 			header("Location: perfil.php");
 		}
 	}	else{
-		echo "No seas metido!!!";
+		echo   "<script '>
+            alert('Credenciales incorrectas!');
+			window.location.href='index.php'
+        </script>";
 	}
 		?>
