@@ -1,15 +1,12 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
-    <title>Aranceles</title>
-</head>
-<body>
 <?php 
 //estilos
 require_once('./header.php');
-     // Cabecera
+?>
+<title>Aranceles</title>
+<body>    
+<?php
+// Cabecera
      require_once('./cabecera.php'); 
     // Menu
  require_once('./menu.php');

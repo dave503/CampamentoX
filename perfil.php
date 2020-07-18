@@ -1,5 +1,5 @@
 <?php require_once('./header.php'); //Header ?>
-<link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
+
 <body>
   <div class="loader"></div>
   <div id="app">
@@ -7,7 +7,7 @@
       <div class="navbar-bg"></div>
        <!-- Cabecera-->
        <?php require_once('./cabecera.php'); ?>
-       
+       <title>Perfil | <?php echo $row['usuario']; ?></title>
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
@@ -94,7 +94,7 @@
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" id="profile-tab2" data-toggle="tab" href="#settings" role="tab" aria-selected="false">Editar perfil</a>
+                        <a class="nav-link active" href="./informacion.php">Editar informacion</a>
                       </li>
                     </ul>
                     <div class="tab-content tab-bordered" id="myTab3Content">
@@ -111,9 +111,15 @@
                             <div class="form-group row mb-4">
                               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto de perfil</label>
                               <div class="col-sm-12 col-md-7">
-                                <div id="image-preview" class="image-preview">
+                              <style>
+                                #image{
+                                  background-image: url("./files/<?php echo $row['foto']; ?>") !important;
+                                  background-size: cover !important;
+                                }
+                              </style>
+                                <div id="image" class="image-preview">
                                   <label for="image-upload" id="image-label">Buscar foto</label>
-                                  <input type="file" name="image" id="image-upload" required="" value="./files/<?php echo $row['foto']; ?>">
+                                  <input type="file" name="image" id="image-upload" value="./files/<?php echo $row['foto']; ?>">
                                 </div>
                               </div>
                             </div>

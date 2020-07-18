@@ -1,22 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
-    <title>Admiistradores</title>
-</head>
-<body>
+
     <?php
 //estilos
 require_once('./header.php');
+?>
+<title>Participantes</title>
+<body>
+<?php
      // Cabecera
      require_once('./cabecera.php'); 
     // Menu
  require_once('./menu.php');
   
     ?>
-    <body>
   <div class="loader"></div>
   <div id="app">
     <div class="main-wrapper main-wrapper-1">
@@ -59,7 +54,7 @@ require_once('./header.php');
                                     <th class="text-center">Edad</th>
                                     <th class="text-center">Pago</th>
                                     <th class="text-center">Telefono</th>
-                                    <th class="text-center">ACCIONES</th>
+                                    <th class="text-center">Acciones</th>
                         
 								</tr>
 							</thead>

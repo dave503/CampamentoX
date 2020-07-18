@@ -9,31 +9,13 @@
 		$tip = "Lider";
 		$ruta = "lideres.php";
   }
-  
-/*
-  if ($_GET['tip']==1) {
-    $tip = "Admin";
-		$ruta = "admin.php";
-  }elseif($_GET['tip']==2){
-		$tip = "Lider";
-		$ruta = "lideres.php";
-  }else {
-  	$tip= "Participante";
-		$ruta = "participantes-list.php";
-  }*/
+  require_once('./header.php');
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
-    <title><?php echo $tip; ?></title>
-</head>
+<title><?php echo $tip; ?></title>
 <body>
 
 <?php
-require_once('./header.php');
+
 // Cabecera
 require_once('./cabecera.php'); 
 // Menu

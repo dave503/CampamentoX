@@ -1,4 +1,4 @@
-<link rel='shortcut icon' type='image/x-icon' href='assets\img\favicon.ico'>
+
     <?php
  
     include('funciones/session.php');
