@@ -120,12 +120,12 @@
                             <div class="row">
                               <div class="form-group col-md-6 col-12">
                                 <label>Contraseña</label>
-                                <input name="contra" type="password" class="form-control" value="<?php echo $row['contra']; ?>">
+                                <input name="contra" type="password" class="form-control" value="<?php  ?>">
                               </div>
                               
                               <div class="form-group col-md-6 col-12">
                                 <label>Confirmar contraseña</label>
-                                <input name="contra_conf" type="password" class="form-control" value="<?php echo $row['contra']; ?>">
+                                <input name="contra_conf" type="password" class="form-control" value="<?php  ?>">
                               </div>
                             </div>
                             </div>
