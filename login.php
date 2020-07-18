@@ -2,7 +2,7 @@
 		require_once 'dbcon.php';
 		
 		$username = $_POST['usuario'];
-		$password = $_POST['contra'];
+		$password = md5( $_POST['contra']);
 		/* student */
 		$query = "SELECT * FROM participantes WHERE usuario='$username' AND contra='$password'";
 		$result = mysqli_query($connection,$query);
