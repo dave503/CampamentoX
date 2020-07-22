@@ -148,7 +148,7 @@ $titulo = "NUEVO";
                              <div class="col-xs-12 col-sm-6">
                                   <div class="form-group label-floating">
                                       <label class="control-label">DUI </label>
-                                      <input value="<?php echo $dui; ?>" pattern="[0-9+]{1,15}" class="form-control" type="text" name="dui" maxlength="9"required>
+                                      <input value="<?php echo $dui; ?>" pattern="[0-9+]{1,15}" class="form-control" type="text" name="dui" maxlength="9">
                                   </div>
 				    			        	</div>
 
