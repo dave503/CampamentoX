@@ -54,7 +54,9 @@ require_once('./header.php');
                                     <th class="text-center">Edad</th>
                                     <th class="text-center">Pago</th>
                                     <th class="text-center">Telefono</th>
+                                    <th class="text-center">D/E</th>
                                     <th class="text-center">Acciones</th>
+                                    <th></th>
                         
 								</tr>
 							</thead>
@@ -64,7 +66,7 @@ require_once('./header.php');
 		</div>
                                     <?php 
                                  
-                                 $part =  "SELECT p.id_part, p.nombre, p.apellido, p.sexo, p.direccion,  d.nombre_dep, p.edad, a.tipo, 
+                                 $part =  "	SELECT p.id_part, p.nombre, p.apellido, p.sexo, p.direccion, p.encargado , p.dui,  d.nombre_dep, p.edad, a.tipo, 
                                  a.valor, p.telefono FROM 
                                  participantes p INNER JOIN aranceles a ON p.pago = a.id_aran INNER JOIN 
                                  departamento d ON p.departamento = d.id_dep WHERE p.tipo = 3 AND p.estado = 1";
@@ -85,10 +87,19 @@ require_once('./header.php');
                                     <td><?php echo $data['edad']; ?></td>
                                     <td ><?php echo $data['tipo']." $".$data['valor']; ?></td>
                                     <td><?php echo $data['telefono']; ?></td>
+                                    <td><?php if ($data['edad']>=18) {
+                                      echo $data['dui'];
+                                    }else {
+                                      echo $data['encargado'];
+                                    }
+                                      ?></td>
                                     <td>
                                     <a href="participante.php?tip=3&id=<?php echo $id_part; ?>" title="Editar" class="btn btn-icon btn-primary"><i class="far fa-edit"></i></a>
                                         </a>
-                                        <a href="funciones/del-participante.php?id=<?php echo $id_part; ?>"  title="Eliminar" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a></a>
+                                       <a href="funciones/del-participante.php?id=<?php echo $id_part; ?>"  title="Eliminar" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a></a>
+                                       
+                                    </td>
+                                    <td>
                                     </td>
                                         
                                 </tr>
