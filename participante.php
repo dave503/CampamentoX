@@ -134,7 +134,7 @@ $titulo = "NUEVO";
                             <div class="col-xs-12 col-sm-6">
                                  <div class="form-group label-floating">
                                     <label class="control-label">E-mail</label>
-                                    <input value="<?php echo $email; ?>" class="form-control" type="email" name="email" maxlength="30" required>
+                                    <input value="<?php echo $email; ?>" class="form-control" type="email" name="email" maxlength="30">
                                 </div>
 				    			        	</div>
 
@@ -155,7 +155,7 @@ $titulo = "NUEVO";
                             <div class="col-xs-12 col-sm-6">
                                   <div class="form-group label-floating">
                                       <label class="control-label">Encargado</label>
-                                      <input value="<?php echo $encargado; ?>" class="form-control" type="text" name="encargado" maxlength="50"required>
+                                      <input value="<?php echo $encargado; ?>" class="form-control" type="text" name="encargado" maxlength="50">
                                   </div>
 				    			        	</div>
 
@@ -180,7 +180,7 @@ $titulo = "NUEVO";
 
                             <div class="col-xs-12 col-sm-6">
 									              	<div class="form-group label-floating">
-										              	<label class="control-label">Mienbro</label>
+										              	<label class="control-label">Miembro</label>
                                     
                                         <select name="tipo" class="form-control" required>
                                         

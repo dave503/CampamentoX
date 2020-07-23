@@ -16,15 +16,23 @@
     $tipo = $_POST['tipo'];
     $foto = "";
 
-    $pass = "123";
+    if($sexo == "Masculino"){
+        $foto="./assets/img/M.png";
+    }elseif($sexo == "Femenino"){
+        $foto = "./assets/img/F.png";
+    }else{
+        $foto = "./assets/img/camp.png";
+    }
+    
+    $pass = "12345";
     $pass = md5($pass);
 
     $par1 = strtolower(substr($nombre,0, -1));
     $par2 = random_int(100, 1000);
     $usuario = $par1.$par2;
 
-    $query = "INSERT INTO participantes (nombre, apellido, sexo, direccion, email, telefono, edad, dui, encargado, pago, departamento, usuario, contra, tipo, fecha_registro) 
-    VALUES ('$nombre', '$apellido', '$sexo', '$direccion', '$email', '$telefono', '$edad', '$dui', '$encargado', '$pago', '$departamento', '$usuario', '$pass', '$tipo', NOW());";
+    $query = "INSERT INTO participantes (nombre, apellido, sexo, direccion, email, telefono, edad, dui, encargado, pago, departamento, usuario, contra, tipo, foto, fecha_registro) 
+    VALUES ('$nombre', '$apellido', '$sexo', '$direccion', '$email', '$telefono', '$edad', '$dui', '$encargado', '$pago', '$departamento', '$usuario', '$pass', '$tipo', '$foto', NOW());";
 
 
     $result = mysqli_query($connection,$query) or die (mysqli_error($connection));

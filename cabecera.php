@@ -15,16 +15,20 @@
             <li><a href="#" class="nav-link nav-link-lg fullscreen-btn">
                 <i data-feather="maximize"></i>
               </a></li>
-          </ul>
+             
+          </ul> 
+          <h3>LOGISTICA CAMPAMENTO NACIONAL IDDPU</h3>
         </div>
-        <?php if($row['foto']=="null" || $row['foto']==""){
-                      $fotoP="./assets/img/".$row['sexo'].".png";
-                    }else{
-                      $fotoP = "./files/".$row['foto'];
-                    }
-                    ?>
+       
+        <?php 
+          if(strpos($row['foto'], "./assets/")!== false){
+            $ph = $row['foto'];
+          }else{
+            $ph = "./files/".$row['foto'];
+          }
+        ?>
         <ul class="navbar-nav navbar-right">
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="<?php echo $fotoP; ?>" class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="<?php echo $ph; ?>" class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
               <div class="dropdown-title">Hola <?php echo $row['nombre']." ".$row['apellido']; ?></div>
               <a href="./perfil.php" class="dropdown-item has-icon"> <i class="far
@@ -136,7 +140,10 @@ Encabezado </span>
 <?php 
           if($row['tipo']==1){
             require_once('./menu.php');
+          }elseif($row['tipo']==2){
+            require_once('./menu_li.php');
           }else{
-            echo require_once('./menu_norm.php');
+            require_once('./menu_norm.php');
           }
        ?>   
+

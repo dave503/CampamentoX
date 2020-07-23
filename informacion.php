@@ -19,7 +19,7 @@
                   <div class="card-body">
                     <div class="author-box-center">
                   
-                      <img alt="image" src="<?php echo $fotoP; ?>" class="rounded-circle author-box-picture">
+                      <img alt="image" src="<?php echo $ph; ?>" class="rounded-circle author-box-picture">
                       <div class="clearfix"></div>
                       <div class="author-box-name">
                         <a href="#"><?php echo $row['nombre']." ".$row['apellido']; ?></a>
@@ -101,31 +101,30 @@
                         <form action="./funciones/add-informacion.php" method="post" class="needs-validation" enctype="multipart/form-data" name="foo">
                           <input type="hidden" name="id" value="<?php echo $row['id_part'];?>">
                           <div class="card-body">
+                            <div class="card-header">
+                                  <h3>Actualizar contraseña | <?php echo $row['usuario']; ?></h3>
+                            </div>
                             <div class="row">
                               <div class="form-group col-md-6 col-12">
                                 <label>Nombre</label>
-                                <input name="nombre" type="text" class="form-control" value="<?php echo $row['nombre']; ?>">
-                                <div class="invalid-feedback">
-                                  Inserte su nombre
-                                </div>
+                                <input disabled name="nombre" type="text" class="form-control" value="<?php echo $row['nombre']; ?>">
+                             
                               </div>
                               <div class="form-group col-md-6 col-12">
                                 <label>Apellido</label>
-                                <input name="apellido" type="text" class="form-control" value="<?php echo $row['apellido']; ?>">
-                                <div class="invalid-feedback">
-                                  Inserte su apellido
-                                </div>
+                                <input disabled name="apellido" type="text" class="form-control" value="<?php echo $row['apellido']; ?>">
+                                
                               </div>
                             </div>
                             <div class="row">
                               <div class="form-group col-md-6 col-12">
                                 <label>Contraseña</label>
-                                <input name="contra" type="password" class="form-control" value="<?php  ?>">
+                                <input name="contra" type="password" class="form-control" value="">
                               </div>
                               
                               <div class="form-group col-md-6 col-12">
                                 <label>Confirmar contraseña</label>
-                                <input name="contra_conf" type="password" class="form-control" value="<?php  ?>">
+                                <input name="contra_conf" type="password" class="form-control" value="">
                               </div>
                             </div>
                             </div>

@@ -20,7 +20,7 @@
                   <div class="card-body">
                     <div class="author-box-center">
                   
-                      <img alt="image" src="<?php echo $fotoP; ?>" class="rounded-circle author-box-picture">
+                      <img alt="image" src="<?php echo $ph; ?>" class="rounded-circle author-box-picture">
                       <div class="clearfix"></div>
                       <div class="author-box-name">
                         <a href="#"><?php echo $row['nombre']." ".$row['apellido']; ?></a>
@@ -94,7 +94,7 @@
                   <div class="padding-20">
                     <ul class="nav nav-tabs" id="myTab2" role="tablist">
                       <li class="nav-item">
-                        <a class="nav-link active" href="./informacion.php">Editar informacion</a>
+                        <a class="nav-link active" href="./informacion.php">Editar contraseña</a>
                       </li>
                     </ul>
                     <div class="tab-content tab-bordered" id="myTab3Content">
@@ -102,6 +102,9 @@
                         <form action="./funciones/add-foto.php" method="post" class="needs-validation" enctype="multipart/form-data" name="foo">
                           <input type="hidden" name="id" value="<?php echo $row['id_part'];?>">
                           <div class="card-body">
+                            <div class="card-header">
+                                <h3>Editar foto de perfil</h3>
+                            </div>
                             <div class="row">
                             
                             
@@ -111,9 +114,10 @@
                             <div class="form-group row mb-4">
                               <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Foto de perfil</label>
                               <div class="col-sm-12 col-md-7">
+                              
                               <style>
                                 #image{
-                                  background-image: url("./files/<?php echo $row['foto']; ?>") !important;
+                                  background-image: url("<?php echo $ph; ?>") !important;
                                   background-size: cover !important;
                                 }
                               </style>

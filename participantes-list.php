@@ -56,7 +56,7 @@ require_once('./header.php');
                                     <th class="text-center">Telefono</th>
                                     <th class="text-center">D/E</th>
                                     <th class="text-center">Acciones</th>
-                                    <th></th>
+                                    
                         
 								</tr>
 							</thead>
@@ -99,8 +99,7 @@ require_once('./header.php');
                                        <a href="funciones/del-participante.php?id=<?php echo $id_part; ?>"  title="Eliminar" class="btn btn-icon btn-danger"><i class="fas fa-times"></i></a></a>
                                        
                                     </td>
-                                    <td>
-                                    </td>
+                  
                                         
                                 </tr>
                                 <?php } ?>

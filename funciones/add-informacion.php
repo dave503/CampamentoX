@@ -3,11 +3,11 @@
 include('./dbcon.php');
 include '../funciones/session.php';
 
-$nombre = $_POST['nombre'];
-$apellido = $_POST['apellido'];
 $pass = $_POST['contra'];
+$confpass = $_POST['contra_conf'];
 
- $query = "UPDATE participantes SET nombre = '$nombre', apellido='$apellido',contra='$pass', fecha_mod=NOW() WHERE id_part = '$id'";
+if($pass == $confpass){
+    $query = "UPDATE participantes SET contra='$pass', fecha_mod=NOW() WHERE id_part = '$id'";
  $result = mysqli_query($connection,$query) or die (mysqli_error($connection));
 
  if($result == 1){
@@ -19,8 +19,13 @@ $pass = $_POST['contra'];
           </script>";
   
  }
+}
+ 
 else{
-echo "Las contrasenias no son las mismas!";
+    echo   "<script '>
+    alert('Las contraseñas no son iguales!');
+    window.location.href='  ../informacion.php'
+</script>";
 }
 
 
